@@ -1,4 +1,5 @@
 package Task;
+       //number rev
 	 import java.util.Scanner;
 	
 public class Task1 {
