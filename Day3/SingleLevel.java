@@ -7,7 +7,7 @@ public class SingleLevel {
     }
 }
 class subclass extends SingleLevel{
-void view () {
+void raw () {
 	 System.out.println("Received...!");
 }
 }
@@ -15,7 +15,7 @@ class main{
 	public static void main(String [] args) {
 		subclass ref=new subclass();
 		ref.message();
-		ref.view();
+		ref.raw();
 		
 	}
 }	
