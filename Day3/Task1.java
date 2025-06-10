@@ -1,5 +1,5 @@
 package Day4;
-
+   //Bank details
 class SbiAcc{
 	private String Accholder;
 	private int balance;
