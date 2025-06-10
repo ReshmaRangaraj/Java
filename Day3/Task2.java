@@ -1,5 +1,5 @@
 package Day3;
-
+		//Empolyee Details
 public class Task2 {
 
 		void salary(String empolyee, double fixed) {
