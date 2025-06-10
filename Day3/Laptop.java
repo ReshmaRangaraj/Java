@@ -1,19 +1,18 @@
-package Day3;
-	//constructor
-public class Laptop {
-	String model;
-	int size;
-	
-	Laptop(String model,int size){
-		this.model=model;
-		this.size=size;
+package Day4;
+   //Method OverRiding
+class Laptop1 {
+	void os() {
+		System.out.println("Windows 10");
 	}
-	void display() {
-		  
-		  System.out.println("lap"+ " "+model + " " +size);
-	  }
-	  public static void main(String[]args) {
-		 Laptop r =new Laptop("abc", 45);
-		  r.display();
-	  }
+}
+class update extends Laptop1{
+	void os(){
+		System.out.println("Window 11");
+	}
+}
+public class Laptop {
+	public static void main(String []args) {
+		update u=new update();
+		u.os();
+	}
 }
