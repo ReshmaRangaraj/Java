@@ -1,5 +1,5 @@
 package Day3;
-
+	//constructor
 public class Laptop {
 	String model;
 	int size;
