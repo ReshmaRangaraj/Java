@@ -43,9 +43,27 @@ mysql> select*from employee_details;
         |    3 | kavin | staff  |    500 |
         +------+-------+--------+--------+
         4 rows in set (0.00 sec)
-
-
-
+// multirow function:
+1.count():
+mysql> select count(*)
+    -> from employee_details
+    -> where salary<500 and depat= 2;
+        +----------+
+        | count(*) |
+        +----------+
+        |        0 |
+        +----------+
+        1 row in set (0.04 sec)
+2.sum():
+mysql> select sum(salary)
+    -> from employee_details
+    -> where depat='sales';
+        +-------------+
+        | sum(salary) |
+        +-------------+
+        |      100000 |
+        +-------------+
+        1 row in set (0.03 sec)      
 
        
 
