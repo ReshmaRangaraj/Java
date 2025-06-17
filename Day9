@@ -1,0 +1,65 @@
+mysql> create database employee_details;
+        Query OK, 1 row affected (0.05 sec)
+
+mysql> show databases;
+        +--------------------+
+        | Database           |
+        +--------------------+
+        | emp                |
+        | emp1               |
+        | empdtl             |
+        | employ             |
+        | employe            |
+        | employee           |
+        | employee_details   |
+        | friends            |
+        | information_schema |
+        | mysql              |
+        | performance_schema |
+        +--------------------+
+      11 rows in set (0.00 sec)
+
+mysql> use employee_details;
+       Database changed
+mysql> CREATE TABLE employee_details (
+    ->   sno INT,
+    ->   name VARCHAR(50),
+    ->   depat VARCHAR(50),
+    ->   salary INT
+    -> );
+      Query OK, 0 rows affected (0.09 sec)
+mysql> INSERT INTO employee_details VALUES 
+    -> (1, 'John', 'Sales', 50000),
+    -> (2, 'abi', 'worker', 5000),
+    -> (3, 'kavin', 'staff', 500);          
+    Query OK, 3 rows affected (0.05 sec)
+mysql> select*from employee_details;
+        +------+-------+--------+--------+
+        | sno  | name  | depat  | salary |
+        +------+-------+--------+--------+
+        |    1 | John  | Sales  |  50000 |
+        |    1 | John  | Sales  |  50000 |
+        |    2 | abi   | worker |   5000 |
+        |    3 | kavin | staff  |    500 |
+        +------+-------+--------+--------+
+        4 rows in set (0.00 sec)
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
