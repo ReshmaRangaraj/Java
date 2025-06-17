@@ -22,17 +22,17 @@ mysql> show databases;
 mysql> use employee_details;
        Database changed
 mysql> CREATE TABLE employee_details (
-    ->   sno INT,
-    ->   name VARCHAR(50),
-    ->   depat VARCHAR(50),
-    ->   salary INT
-    -> );
+         ->   sno INT,
+         ->   name VARCHAR(50),
+         ->   depat VARCHAR(50),
+         ->   salary INT
+         -> );
       Query OK, 0 rows affected (0.09 sec)
 mysql> INSERT INTO employee_details VALUES 
-    -> (1, 'John', 'Sales', 50000),
-    -> (2, 'abi', 'worker', 5000),
-    -> (3, 'kavin', 'staff', 500);          
-    Query OK, 3 rows affected (0.05 sec)
+      -> (1, 'John', 'Sales', 50000),
+      -> (2, 'abi', 'worker', 5000),
+      -> (3, 'kavin', 'staff', 500);          
+      Query OK, 3 rows affected (0.05 sec)
 mysql> select*from employee_details;
         +------+-------+--------+--------+
         | sno  | name  | depat  | salary |
@@ -43,11 +43,12 @@ mysql> select*from employee_details;
         |    3 | kavin | staff  |    500 |
         +------+-------+--------+--------+
         4 rows in set (0.00 sec)
+
 // multirow function:
 1.count():
 mysql> select count(*)
-    -> from employee_details
-    -> where salary<500 and depat= 2;
+       -> from employee_details
+        -> where salary<500 and depat= 2;
         +----------+
         | count(*) |
         +----------+
@@ -56,16 +57,149 @@ mysql> select count(*)
         1 row in set (0.04 sec)
 2.sum():
 mysql> select sum(salary)
-    -> from employee_details
-    -> where depat='sales';
+       -> from employee_details
+       -> where depat='sales';
         +-------------+
         | sum(salary) |
         +-------------+
         |      100000 |
         +-------------+
         1 row in set (0.03 sec)      
+3.avg ():
+mysql> select avg(salary)
+         -> from employee_details;
+        +-------------+
+        | avg(salary) |
+        +-------------+
+        |  26375.0000 |
+        +-------------+
+        1 row in set (0.00 sec)
 
-       
+//having clause:
+mysql> select sum(salary)
+            -> from employee_details
+            -> group by depat
+            -> having sum(salary)>500;
+        +-------------+
+        | sum(salary) |
+        +-------------+
+        |      100000 |
+        |        5000 |
+        +-------------+
+        2 rows in set (0.03 sec)
+
+
+ mysql> select count(*),depat
+          -> from employee_details
+          -> where depat='staff';
+        +----------+-------+
+        | count(*) | depat |
+        +----------+-------+
+        |        1 | staff |
+        +----------+-------+
+        1 row in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
