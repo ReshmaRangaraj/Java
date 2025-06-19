@@ -12,10 +12,10 @@ create table course (
 
 
 insert into student (RollNo, Name, Age) VALUES
-(1, 'Abcd', 30),
-(2, 'efgh', 31),
+(1, 'Abcd', 50),
+(2, 'efgh', 51),
 (3, 'ijkl', 32),
-(4, 'mnop', 39),
+(4, 'mnop', 69),
 (5, 'qrst', 23);
 
 insert into course (CourseID, CourseName, CourseFee) VALUES
