@@ -1,0 +1,11 @@
+select s.studname, s.studrollno, s.studemail, s.course, m.subject, m.marks
+    -> from Students s
+    -> join Marks m ON s.studrollno = m.studrollno
+    -> where m.marks = (
+    -> select max(marks) from Marks
+    -> );
++----------+------------+----------------------+---------------------+---------+-------+
+| studname | studrollno | studemail            | course              | subject | marks |
++----------+------------+----------------------+---------------------+---------+-------+
+| Reshma  |     103738 | reshu@gmail.com       | Computer Technology | English   |  94 |
++----------+------------+----------------------+---------------------+---------+-------+
